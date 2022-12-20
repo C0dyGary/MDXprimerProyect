@@ -17,7 +17,7 @@ export default function Home({ posts }) {
       </Head>
       <main>
         <ul className="">
-          <div className="col-start-2 col-span-5 grid grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-1 md:col-start-2 md:col-span-5 md:grid-cols-3 gap-5">
             {posts.map((post, i) => (
               <li key={i}>
                 <Card post={post} />
