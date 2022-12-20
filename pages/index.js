@@ -17,7 +17,7 @@ export default function Home({ posts }) {
       </Head>
       <main>
         <ul className="">
-          <div className="grid sm:grid-cols-1 md:col-start-2 md:col-span-5 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:col-start-2 lg:col-span-5 lg:grid-cols-3 gap-6">
             {posts.map((post, i) => (
               <div key={i}>
                 <li>
