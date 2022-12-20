@@ -3,7 +3,7 @@
 import Link from "next/link";
 export default function Card({ post: { title, date, slug, description } }) {
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <div className="bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 dark:hover:shadow-2xl dark:hover:shadow-purple-700/95">
       <img src="/img/HU1.png" className="rounded-t-lg" />
       <div className="p-5">
         <Link href={`/blog/${slug}`}>

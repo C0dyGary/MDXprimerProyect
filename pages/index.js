@@ -17,11 +17,13 @@ export default function Home({ posts }) {
       </Head>
       <main>
         <ul className="">
-          <div className="grid sm:grid-cols-1 md:col-start-2 md:col-span-5 md:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-1 md:col-start-2 md:col-span-5 md:grid-cols-3 gap-6">
             {posts.map((post, i) => (
-              <li key={i}>
-                <Card post={post} />
-              </li>
+              <div key={i}>
+                <li>
+                  <Card post={post} />
+                </li>
+              </div>
             ))}
           </div>
         </ul>
