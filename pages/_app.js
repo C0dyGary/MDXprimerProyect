@@ -14,7 +14,7 @@ const components = {
   p: (props) => <p className="text-xl text-justify">{props.children}</p>,
   ul: (props) => <ul className="list-disc p-7">{props.children}</ul>,
   pre: (props) => (
-    <pre className="bg-zinc-800 rounded-md drop-shadow-2xl m-1 p-3 text-sm">
+    <pre className="bg-zinc-800 rounded-md drop-shadow-2xl m-1 p-3 text-sm text-left whitespace-pre-wrap">
       {props.children}
     </pre>
   ),
