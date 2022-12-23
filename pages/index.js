@@ -2,8 +2,7 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import { getAllPostMeta } from "../lib/posts";
 import Card from "../components/Card";
-import Link from "next/link";
-import CardPost from "../components/CardPost";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ posts }) {
