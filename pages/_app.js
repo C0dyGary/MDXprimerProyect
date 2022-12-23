@@ -1,15 +1,11 @@
 import "../styles/globals.css";
-import "../styles/prism-dracula.css";
+import "highlight.js/styles/tomorrow-night-blue.css";
 import { MDXProvider } from "@mdx-js/react";
-
-import { Children, useEffect } from "react";
+import hljs from "highlight.js";
+import { useEffect } from "react";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
-import Prism from "prismjs";
-const CodeBlock = ({ className = "lang-js", children }) => {
-  const lenguaje = className.replace("lang-", "");
-  return <code className={`language-${lenguaje}`}>{children}</code>;
-};
+
 const components = {
   h1: (props) => (
     <h1 className="text-yellow-500 text-3xl capitalize p-3">
@@ -19,19 +15,18 @@ const components = {
   p: (props) => <p className="text-lg text-justify p-2">{props.children}</p>,
   ul: (props) => <ul className="list-disc p-7 text-md">{props.children}</ul>,
   pre: (props) => (
-    <pre className="bg-zinc-800 rounded-md drop-shadow-2xl m-1 p-3 text-sm text-left whitespace-pre-wrap">
+    <pre className="bg-zinc-800 rounded-md drop-shadow-2xl m-1 p-1 text-sm text-left whitespace-pre-wrap">
       {props.children}
     </pre>
   ),
-  code: (props) => <CodeBlock>{props.children}</CodeBlock>,
   img: (props) => (
     <img src={props.src} alt={props.alt} className="h-auto w-auto" />
   ),
 };
 export default function App({ Component, pageProps }) {
   useEffect(() => {
-    Prism.highlightAll();
-  }, []);
+    hljs.initHighlighting();
+  });
   return (
     <MDXProvider components={components}>
       <Header />
