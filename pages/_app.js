@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import "highlight.js/styles/tomorrow-night-blue.css";
+import "highlight.js/styles/tokyo-night-dark.css";
 import { MDXProvider } from "@mdx-js/react";
 import hljs from "highlight.js";
 import { useEffect } from "react";
@@ -8,11 +8,16 @@ import Layout from "../components/Layout";
 
 const components = {
   h1: (props) => (
-    <h1 className="text-yellow-500 text-3xl capitalize p-3">
+    <h1 className="text-yellow-500 text-3xl capitalize p-1">
       {props.children}
     </h1>
   ),
-  p: (props) => <p className="text-lg text-justify p-2">{props.children}</p>,
+  h2: (props) => (
+    <h2 className="text-yellow-500 text-2xl capitalize p-1">
+      {props.children}
+    </h2>
+  ),
+  p: (props) => <p className="text-base text-justify p-2">{props.children}</p>,
   ul: (props) => <ul className="list-disc p-7 text-md">{props.children}</ul>,
   pre: (props) => (
     <pre className="bg-zinc-800 rounded-md drop-shadow-2xl m-1 p-1 text-sm text-left whitespace-pre-wrap">
